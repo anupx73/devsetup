@@ -12,11 +12,47 @@ My workstation set up for dev env
   brew install --cask iterm2
   ```
 
-- Config iterm2
+- Config iterm2  
   ```
   defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$PWD/iterm"
   defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-  cp $PWD/iterm/auto-dark-mode.py $HOME/Library/Application\ Support/iTerm2/Scripts/
-  # To use the above script enable it from Menu > Scripts
+  
+  mkdir $HOME/Library/Application\ Support/iTerm2/Scripts/AutoLaunch
+  
+  cp $PWD/iterm/DarkLightSwitcher.py $HOME/Library/Application\ Support/iTerm2/Scripts/AutoLaunch
   ```
-[TODO]
+  - To stop restoring iTerm last run window content change macOS settings > Desktop & Dock > Enable `Close windows when quitting an application`
+  - Enable Automatic saving of preference changes of iTerms from  Settings > General > Preference > Save changes
+
+- Install Oh-My-Zsh
+  ```
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
+
+- Install Powerlevel10K
+  ```
+  git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+  sed -i .bak 's/robbyrussell/powerlevel10k\/powerlevel10k/1' ~/.zshrc
+  source ~/.zshrc
+  ```
+
+- Install Extra ZSH Plugins
+  ```
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+  
+  # Update ~/.zshrc: plugins with zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting
+  ```
+
+- Install VS Code
+  ```
+  brew install --cask visual-studio-code
+  ```
+
+- Install Maccy
+  ```
+  brew install --cask maccy
+  ```
+
+
