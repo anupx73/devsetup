@@ -41,9 +41,10 @@ My workstation set up for dev env
   git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
   git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-  
-  # Update ~/.zshrc: plugins with zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting
   ```
+    - Update plugins section of ~/.zshrc with zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting
+    - Need to verify the zsh-autocomplete usage with work laptop
+    - Need to verify zsh-syntax-highlighting usage in work laptop with kubectl, gcloud if it works
 
 - Install VS Code
   ```
