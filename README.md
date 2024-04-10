@@ -46,14 +46,24 @@ My workstation set up for dev env
     - Need to verify the zsh-autocomplete usage with work laptop
     - Need to verify zsh-syntax-highlighting usage in work laptop with kubectl, gcloud if it works
 
+- Install Pyenv and Relevant Python Versions
+  ```
+  brew install pyenv
+  echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+  pyenv install 3.11.0
+  pyenv global 3.11.0
+  ```
+    - OS default Python version remains at `/usr/bin/python3`. Use `pyenv global System` to switch back or uninstall pyenv and update `$PATH`.
+    - Pyenv works by adding shims to `$(pyenv root)/shims` to `$PATH`
+
 - Install VS Code
   ```
   brew install --cask visual-studio-code
   ```
 
-- Install Maccy
+- Install Maccy, a macOS Clipboard
   ```
   brew install --cask maccy
   ```
 
-
+  
